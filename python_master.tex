@@ -1,0 +1,28 @@
+\documentclass[a4paper, 11pt]{article}
+\input{../preamble.tex}
+
+% make sure all graphics has width=textwidth
+%\LetLtxMacro{\OldIncludegraphics}{\includegraphics}
+%\renewcommand{\includegraphics}[2][]{\OldIncludegraphics[width=\textwidth, #1]{#2}}
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Python Phrase Book}
+
+\author{%
+\textsc{Eric A. Parnell} \\[1ex]    %\thanks{A thank you or further information} \\[1ex] % Your name
+\normalsize Amador Valley Software, LLC \\ % Your institution
+\normalsize \href{mailto:eaparnell@avsware.com}{eaparnell@avsware.com} % Your email address
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% Include pandoc-generated tex file from markdown
+\input{python.tex}
+
+% 
+\end{document}
