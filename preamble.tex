@@ -1,0 +1,40 @@
+\usepackage[margin=0.1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{top=0.5cm, left=2.0cm, right=2.0cm, bottom=2.0cm}
+\geometry{letterpaper} 
+\usepackage[parfill]{parskip}  						% No indentation on paragraphs
+\usepackage{changepage}							      % allows adjustwidth
+\usepackage{setspace}							      	% allows double spacing
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{titling} 
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{letltxmacro}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage[framemethod=tikz]{mdframed}
+\graphicspath{{./images/}}
+\definecolor{ft}{RGB}{255,238,222}
+
+% yellow!30
+
+
+% Make sure figures don't go to the end of the document
+\floatplacement{figure}{H}
+% Necessary for pandoc bug
+\newcommand{\passthrough}[1]{\lstset{mathescape=false}#1\lstset{mathescape=true}}
+
+% Create environment for python code listing
+\newenvironment{pythoncode}
+    {\VerbatimEnvironment 
+      \begin{minted}{python}}
+    {\end{minted}}
+
+\newenvironment{commands}
+    {\begin{mdframed}[hidealllines=true,backgroundcolor=yellow!20, leftmargin=20pt, rightmargin=10pt, skipabove=5pt]
+       \fontfamily{\ttdefault}\selectfont} 
+     {\end{mdframed}}
